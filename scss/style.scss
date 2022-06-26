@@ -259,9 +259,15 @@ body {
 			weight: 700;
 			style: italic;
 		}
+	}
 
-		span {
-			color: #14f082;
+	p {
+		color: #14f082;
+		font: {
+			size: 1rem;
+			family: $font-other;
+			weight: 700;
+			style: italic;
 		}
 	}
 }

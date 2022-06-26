@@ -245,8 +245,12 @@ body {
   font-weight: 700;
   font-style: italic;
 }
-.copyright span span {
+.copyright p {
   color: #14f082;
+  font-size: 1rem;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
 
 @media (min-width: 768px) {
