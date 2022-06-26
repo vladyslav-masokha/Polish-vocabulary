@@ -4,30 +4,36 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Słownik polski</title>
-		<link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon" />
+		<title>Polish dictionary | words</title>
+		<!-- CSS -->
 		<link rel="stylesheet" href="./css/reset.css" />
-		<link rel="stylesheet" href="./css/normalize.css" />
 		<link rel="stylesheet" href="./css/style.css" />
+		<!-- SCRIPTS -->
 		<script src="./js/main.js" defer></script>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon" />
 	</head>
 	<body>
-		<!-- ! Słownik polski (Website)  -->
+		<!-- ! Polish dictionary (Website)  -->
 		<div id="page">
-			<!-- ! Header -->
+			<!-- Header -->
 			<header id="header">
 				<div class="wrapper">
-					<!-- TODO: Clock -->
-					<span id="time"></span>
+					<!-- todo: Date and Clock -->
+					<div class="date-and-clock">
+						<span id="m-date"></span>
+						<span id="t-date"></span>
+						<span id="time"></span>
+					</div>
 					<hr />
 
 					<div class="header-inner">
-						<!-- TODO: Logo -->
+						<!-- todo: Logo -->
 						<div class="logo">
-							<a href="./index.html">Słownik polski <span>(doc)</span></a>
+							<a href="./index.html">Polish dictionary <span>(words)</span></a>
 						</div>
 
-						<!-- TODO: Navigation -->
+						<!-- todo: Check burger -->
 						<div class="navbar">
 							<input type="checkbox" class="check-burger" />
 							<p class="close">
@@ -36,85 +42,51 @@
 								<span></span>
 								<span></span>
 							</p>
+
+							<!-- todo: Navigation -->
 							<nav class="nav">
 								<a
 									href="./index.html"
 									class="nav-link active-link"
-									title="Strona główna"
+									title="Main page"
 									>Dom</a
 								>
-								<a href="#" class="nav-link"
-									><span>Słownik polski <span>(wiem)</span></span></a
-								>
+								<a href="#" class="nav-link">
+									<span>
+										Polish dictionary
+										<span>(wiem)</span>
+									</span>
+								</a>
 							</nav>
 						</div>
 					</div>
 				</div>
 			</header>
 
-			<!-- ! Słowa -->
+			<!-- Words -->
 			<section id="list-word">
 				<div class="wrapper">
-					<!-- ? Powitalne słowa -->
+					<h2>Word base</h2>
 					<div class="list-word-inner">
-						<div class="one">
-							<h2>Powitalne słowa</h2>
-							<ul>
-								<li>Cześć / Witam - <span>привіт</span></li>
-								<li>PA - <span>бувай</span></li>
-								<li>Dzień dobry (rano) - <span>Доброго ранку</span></li>
-								<li>Dzień dobry (po południu) - <span>Добрий день</span></li>
-								<li>Do widzenia - <span>До побачення</span></li>
-								<li>Do zobaczenia - <span>До зустрічі</span></li>
-							</ul>
-						</div>
-						<!-- ? Znajomy -->
-						<div class="two">
-							<h2>Znajomy</h2>
-							<ul>
-								<li>Jak masz na imię? - <span>Як тебе звати?</span></li>
-								<li>Mam na imię Vlad. - <span>Мене звати Влад.</span></li>
-								<li>Ile masz lat? - <span>Скільки тобі років?</span></li>
-								<li>Mam 16 lat. - <span>Мені 16 років.</span></li>
-							</ul>
-						</div>
-
-						<!-- ? Kolory -->
-						<div class="three">
-							<h2>Kolory</h2>
-							<ul>
-								<li>Biały - <span>Білий</span></li>
-								<li>Czarny - <span>Чорний</span></li>
-								<li>Pomarańczowy - <span>Оранжевий</span></li>
-								<li>Czerwony - <span>Червоний</span></li>
-								<li>Żółty - <span>Жовтий</span></li>
-								<li>Fioletowy - <span>Фіолетовий</span></li>
-								<li>Niebieskie - <span>Синій</span></li>
-								<li>Brązowy - <span>Коричневий</span></li>
-								<li>Różowy - <span>Рожевий</span></li>
-							</ul>
-						</div>
-
-						<!-- ? Numbery -->
-						<div class="four">
-							<h2>Numery</h2>
-							<ul>
-								<li>Jeden - <span>Один</span></li>
-								<li>Dwa - <span>Два</span></li>
-								<li>Trzy - <span>Три</span></li>
-								<li>Cztery - <span>Чотири</span></li>
-								<li>Pięć - <span>П'ять</span></li>
-								<li>Sześć - <span>Шість</span></li>
-								<li>Siedem - <span>Сім</span></li>
-								<li>Osiem - <span>Вісім</span></li>
-								<li>Dziewięć - <span>Дев'ять</span></li>
-								<li>Dziesięć - <span>Десять</span></li>
-							</ul>
-						</div>
+						<!-- todo: Word list -->
+						<ul id="words-list"></ul>
+						<hr />
 					</div>
 				</div>
 			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="wrapper">
+					<div class="copyright">
+						<span>Polish dictionary</span>
+					</div>
+				</div>
+			</footer>
 		</div>
-		<script src="./js/jquery-3.6.0.min.js"></script>
+
+		<script type="text/template" id="show-all-sort-words">
+			<li>{{plWords}} - <span>{{uaWords}}</span></li>
+		</script>
 	</body>
 </html>
