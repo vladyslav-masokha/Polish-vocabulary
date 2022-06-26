@@ -245,6 +245,9 @@ body {
   font-weight: 700;
   font-style: italic;
 }
+.copyright span span {
+  color: #14f082;
+}
 
 @media (min-width: 768px) {
   .wrapper {
